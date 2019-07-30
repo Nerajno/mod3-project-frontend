@@ -1,5 +1,5 @@
 body{
-    background-image: url("/mod3-project-frontend/assets/images/backgroundImg.jpg");
+    background-image: url("./assets/images/backgroundImg.jpg");
 
     /* Full height */
     height: 100%; 
