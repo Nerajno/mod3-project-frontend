@@ -9,3 +9,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+section,
+footer{
+    text-align: center
+}
+
+img{
+    width: 60vw;
+    height: 70vh;
+    margin: 0 auto;
+}
