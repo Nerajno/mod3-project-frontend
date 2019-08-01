@@ -45,12 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let labelComment1 = document.createElement('label')
             labelComment1.innerText = 'Caption: '
             firstComment.appendChild(labelComment1)
+            
 
             let input = document.createElement('input')
             input.id = 'comment1'
             input.name = 'comment1'
             input.type = 'textarea'
             input.setAttribute('data-votes', 0)
+            input.setAttribute('caption', "")
             firstComment.appendChild(input)
 
 
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             input.name = 'comment2'
             input.type = 'textarea'
             input.setAttribute('data-votes', 0)
+            input.setAttribute('caption', "")
             anotherComment.appendChild(input)
 
 
@@ -102,12 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let submitBox = document.createElement('input')
             submitBox.setAttribute('type', 'submit')
-            submitBox.setAttribute('value', 'The Votes are In!')
+            submitBox.setAttribute('value', 'Tally the Votes!')
             let formSub = document.querySelector('.form')
-            formSub.addEventListener('submit', handleSubmit)
+            formSub.addEventListener('submit', handleVotes)
             formSub.appendChild(submitBox)
             
-            
+
         } else if (e.target.innerText === "okay thats enough"){
             function stop() {
                 alert("Alright man, I said thats enough");
@@ -118,6 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function increaseVote(e){
 
+        let comment1Votes = document.querySelector('#comment1').dataset.votes
+        let votesForComment1 = parseInt(comment1Votes)
+
+        let comment2Votes = document.querySelector('#comment2').dataset.votes
+        let votesForComment2 = parseInt(comment2Votes)
+
         if(e.target.innerText === 'vote for 1'){
             let btn1 = document.querySelector('#like1')
             btn1.addEventListener('click', voteFor1)
@@ -127,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let btn2 = document.querySelector('#like2')
             btn2.addEventListener('click', voteFor2)
         }
+    
     }
 
     function voteFor1(e){
@@ -145,8 +155,47 @@ document.addEventListener('DOMContentLoaded', () => {
         second.dataset.votes = votesForComment2
     }
 
-    function handleSubmit(e){
-        console.log('click')
+    function handleVotes(e){
+        let comment1Votes = document.querySelector('#comment1').dataset.votes
+        let votesForComment1 = parseInt(comment1Votes)
+
+        let comment2Votes = document.querySelector('#comment2').dataset.votes
+        let votesForComment2 = parseInt(comment2Votes)
+
+        if(votesForComment1 + votesForComment2 === 10){
+            tallyVotes()
+        }
+
+
+    }
+
+    function tallyVotes(){
+        alert('Alright Polls are closed! Click tally to get the Winner!')
+        let getWinner = document.createElement('button')
+        getWinner.setAttribute('id', 'getWinner')
+        getWinner.setAttribute('name', 'getWinner')
+        getWinner.innerText = 'Pick The Winner!'
+        getWinner.addEventListener('click', pickTheWinner)
+        let formSub = document.querySelector('.form')
+        formSub.appendChild(getWinner)
+    }
+
+    function pickTheWinner(e){
+        e.preventDefault()
+        console.log(e.target)
+        let comment1Votes = document.querySelector('#comment1').dataset.votes
+        let votesForComment1 = parseInt(comment1Votes)
+
+        let comment2Votes = document.querySelector('#comment2').dataset.votes
+        let votesForComment2 = parseInt(comment2Votes)
+
+        if(votesForComment1 > votesForComment2){
+            console.log('1 winer')
+        } else if (votesForComment1 < votesForComment2){
+            console.log('2 winer')
+        } else if (votesForComment1 === votesForComment2){
+            console.log('1 winer')
+        }
     }
 
     
