@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let pictureFrame = document.querySelector('img')
         pictureFrame.src = firstPic
         pictureFrame.id = data[0].id
-        pictureFrame.setAttribute('data-vote-id1', 0)
-        pictureFrame.setAttribute('data-vote-id2', 2)
+        // pictureFrame.setAttribute('data-vote-id1', 0)
+        // pictureFrame.setAttribute('data-vote-id2', 2)
+        pictureFrame.setAttribute('caption', "")
 
         let newBtn = document.querySelector('#next-pic')
         newBtn.addEventListener('click', handleNewBtn)
@@ -39,8 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault()
             let firstComment = document.createElement('form')
             firstComment.setAttribute('class', 'form')
+           
 
             btn.innerText = 'add another comment'
+          
 
             let labelComment1 = document.createElement('label')
             labelComment1.innerText = 'Caption: '
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let commentBtn = document.createElement('button')
             commentBtn.innerText = 'vote for 1'
-            commentBtn.addEventListener('click', increaseVote)
+            commentBtn.addEventListener('click', voteFor1)
             commentBtn.setAttribute('id', 'like1')
             firstComment.appendChild(commentBtn)
 
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const commentBtn2 = document.createElement('button')
             commentBtn2.innerText = 'vote for 2'
             commentBtn2.setAttribute('id', 'like2')
-            commentBtn2.addEventListener('click', increaseVote)
+            commentBtn2.addEventListener('click', voteFor2)
             anotherComment.appendChild(commentBtn2)
 
 
@@ -119,27 +122,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }    
     }
 
-    function increaseVote(e){
+    // function increaseVote(e){
 
-        let comment1Votes = document.querySelector('#comment1').dataset.votes
-        let votesForComment1 = parseInt(comment1Votes)
+    //     let comment1Votes = document.querySelector('#comment1').dataset.votes
+    //     let votesForComment1 = parseInt(comment1Votes)
 
-        let comment2Votes = document.querySelector('#comment2').dataset.votes
-        let votesForComment2 = parseInt(comment2Votes)
+    //     let comment2Votes = document.querySelector('#comment2').dataset.votes
+    //     let votesForComment2 = parseInt(comment2Votes)
 
-        if(e.target.innerText === 'vote for 1'){
-            let btn1 = document.querySelector('#like1')
-            btn1.addEventListener('click', voteFor1)
+    //     if(e.target.innerText === 'vote for 1'){
+    //         let btn1 = document.querySelector('#like1')
+    //         btn1.addEventListener('click', voteFor1)
             
-        }
-        if(e.target.innerText === 'vote for 2'){
-            let btn2 = document.querySelector('#like2')
-            btn2.addEventListener('click', voteFor2)
-        }
+    //     }
+    //     if(e.target.innerText === 'vote for 2'){
+    //         let btn2 = document.querySelector('#like2')
+    //         btn2.addEventListener('click', voteFor2)
+    //     }
     
-    }
+    // }
 
     function voteFor1(e){
+        e.preventDefault()
         let comment1Votes = document.querySelector('#comment1').dataset.votes
         let votesForComment1 = parseInt(comment1Votes)
         votesForComment1 += 1
@@ -148,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function voteFor2(e){
+        e.preventDefault()
         let comment2Votes = document.querySelector('#comment2').dataset.votes
         let votesForComment2 = parseInt(comment2Votes)
         votesForComment2 += 1
@@ -156,47 +161,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleVotes(e){
+
         let comment1Votes = document.querySelector('#comment1').dataset.votes
-        let votesForComment1 = parseInt(comment1Votes)
+        let votesForCommentOne = parseInt(comment1Votes)
 
         let comment2Votes = document.querySelector('#comment2').dataset.votes
-        let votesForComment2 = parseInt(comment2Votes)
-
-        if(votesForComment1 + votesForComment2 === 10){
-            tallyVotes()
-        }
+        let votesForCommentTwo = parseInt(comment2Votes)
+        
+        if(votesForCommentOne + votesForCommentTwo === 10){
+            alert('Alright Polls are closed, Calculating....!')
+            // let getWinner = document.createElement('button')
+            // getWinner.setAttribute('id', 'getWinner')
+            // getWinner.setAttribute('name', 'getWinner')
+            // getWinner.innerText = 'Pick The Winner!'
+            // let formSub = document.querySelector('.form')
+            // formSub.appendChild(getWinner)
+            // getWinner.addEventListener('click', pickTheWinner)
+            if(votesForCommentOne > votesForCommentTwo){
+                document.
+                console.log('1 winner')           
+                alert('Vote 1, wins!!')
+            } else if (votesForCommentOne < votesForCommentTwo){
+                console.log('2 winner')
+                alert('Vote 2, wins!!')
+            // } else if (votesForComment1 === votesForComment2){
+            //     console.log('1 winer')
+            }
+        } 
+        
 
 
     }
 
-    function tallyVotes(){
-        alert('Alright Polls are closed! Click tally to get the Winner!')
-        let getWinner = document.createElement('button')
-        getWinner.setAttribute('id', 'getWinner')
-        getWinner.setAttribute('name', 'getWinner')
-        getWinner.innerText = 'Pick The Winner!'
-        getWinner.addEventListener('click', pickTheWinner)
-        let formSub = document.querySelector('.form')
-        formSub.appendChild(getWinner)
-    }
+    // function tallyVotes(){
 
-    function pickTheWinner(e){
-        e.preventDefault()
-        console.log(e.target)
-        let comment1Votes = document.querySelector('#comment1').dataset.votes
-        let votesForComment1 = parseInt(comment1Votes)
+    // }
 
-        let comment2Votes = document.querySelector('#comment2').dataset.votes
-        let votesForComment2 = parseInt(comment2Votes)
+    // function pickTheWinner(){
+        
+    //     let comment1Votes = document.querySelector('#comment1').dataset.votes
+    //     let votesForComment1 = parseInt(comment1Votes)
 
-        if(votesForComment1 > votesForComment2){
-            console.log('1 winer')
-        } else if (votesForComment1 < votesForComment2){
-            console.log('2 winer')
-        } else if (votesForComment1 === votesForComment2){
-            console.log('1 winer')
-        }
-    }
+    //     let comment2Votes = document.querySelector('#comment2').dataset.votes
+    //     let votesForComment2 = parseInt(comment2Votes)
+
+    // }
 
     
 
@@ -204,3 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
     init()
 
 })
+
+
+
+
+
+
+
+
+
+
