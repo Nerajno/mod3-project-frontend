@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    const pic = document.querySelector('.current_pic')
+    
     function init(){
         fetch("https://www.newyorker.com/cartoons/random/randomAPI")
         .then(r=>r.json())
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function formHandler(e){
         e.preventDefault()
-        const pic = document.querySelector('.current_pic')
         let btn = document.querySelector('#get-started')
 
         //create form and first field
@@ -43,21 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = 'add another comment'
 
             let labelComment1 = document.createElement('label')
-            labelComment1.innerText = 'Comment:'
+            labelComment1.innerText = 'Caption: '
             firstComment.appendChild(labelComment1)
 
             let input = document.createElement('input')
-            input.id = 'comment'
-            input.name = 'comment'
-            input.type = 'text'
+            input.id = 'comment1'
+            input.name = 'comment1'
+            input.type = 'textarea'
             input.setAttribute('data-votes', 0)
             firstComment.appendChild(input)
 
 
             let commentBtn = document.createElement('button')
             commentBtn.innerText = 'vote for 1'
-            // commentBtn.setAttribute('data-votes', 0)
             commentBtn.addEventListener('click', increaseVote)
+            commentBtn.setAttribute('id', 'like1')
             firstComment.appendChild(commentBtn)
 
             let breakFirstComment = document.createElement('br')
@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let anotherComment = document.querySelector('.form')
 
             const labelComment2 = document.createElement('label')
-            labelComment2.innerText = 'Comment:'
+            labelComment2.innerText = 'Caption: '
             anotherComment.appendChild(labelComment2)
 
             let input = document.createElement('input')
-            input.id = 'comment'
-            input.name = 'comment'
-            input.type = 'text'
+            input.id = 'comment2'
+            input.name = 'comment2'
+            input.type = 'textarea'
             input.setAttribute('data-votes', 0)
             anotherComment.appendChild(input)
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // input.setAttribute('data-id', )
             const commentBtn2 = document.createElement('button')
             commentBtn2.innerText = 'vote for 2'
-            // commentBtn2.setAttribute('data-votes', 0)
+            commentBtn2.setAttribute('id', 'like2')
             commentBtn2.addEventListener('click', increaseVote)
             anotherComment.appendChild(commentBtn2)
 
@@ -99,38 +99,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let btn = document.querySelector('#get-started')
             btn.innerText = "okay thats enough"
+
+            let submitBox = document.createElement('input')
+            submitBox.setAttribute('type', 'submit')
+            submitBox.setAttribute('value', 'The Votes are In!')
+            let formSub = document.querySelector('.form')
+            formSub.addEventListener('submit', handleSubmit)
+            formSub.appendChild(submitBox)
+            
             
         } else if (e.target.innerText === "okay thats enough"){
             function stop() {
                 alert("Alright man, I said thats enough");
             }
             stop()
-        }
-
-        
+        }    
     }
 
     function increaseVote(e){
-        // let voteCount = e.target.dataset.votes
-        // let newVoteCount = parseInt(voteCount) + 1
-        // voteCount = newVoteCount
-        // console.log(e.target.innerText)
 
         if(e.target.innerText === 'vote for 1'){
-
-            let votes = document.querySelector('.current_pic')
-            console.log(votes.dataset.voteId1, 'votes1')
+            let btn1 = document.querySelector('#like1')
+            btn1.addEventListener('click', voteFor1)
+            
         }
         if(e.target.innerText === 'vote for 2'){
-            let votes2 = document.querySelector('.current_pic')
-            console.log(votes2.dataset.voteId2, 'votes2')
+            let btn2 = document.querySelector('#like2')
+            btn2.addEventListener('click', voteFor2)
         }
-        
-        console.log(e.target)
-
-
     }
 
+    function voteFor1(e){
+        let comment1Votes = document.querySelector('#comment1').dataset.votes
+        let votesForComment1 = parseInt(comment1Votes)
+        votesForComment1 += 1
+        let first = document.querySelector('#comment1')
+        first.dataset.votes = votesForComment1
+    }
+
+    function voteFor2(e){
+        let comment2Votes = document.querySelector('#comment2').dataset.votes
+        let votesForComment2 = parseInt(comment2Votes)
+        votesForComment2 += 1
+        let second = document.querySelector('#comment2')
+        second.dataset.votes = votesForComment2
+    }
+
+    function handleSubmit(e){
+        console.log('click')
+    }
 
     
 
