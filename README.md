@@ -53,7 +53,14 @@ Let people know how they can contribute into your project. A [contributing guide
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. For example, this was borrowed from [https://gist.github.com/akashnimare]
 
 
-#### Anything else that seems useful
+#### Stuff Left To Do
+- [ ] Write Final ReadMe
+- [ ] Make Screenshots or gifs 
+- [ ] Add Bootstrap to the styling
+- [ ] Add add Font Awesome to the Styling
+- [ ] use me as example <= ...
+- [ ] completed
+
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
