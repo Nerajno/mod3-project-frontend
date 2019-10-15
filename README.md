@@ -53,13 +53,13 @@ Let people know how they can contribute into your project. A [contributing guide
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. For example, this was borrowed from [https://gist.github.com/akashnimare]
 
 
-#### Stuff Left To Do
-- [ ] Write Final ReadMe
-- [ ] Make Screenshots or gifs 
-- [ ] Add Bootstrap to the styling
-- [ ] Add add Font Awesome to the Styling
-- [ ] use me as example <= ...
-- [ ] completed
+
+- [ ] Add to final Portfolio.
+- [ ] Rewrite clear User Stories.
+- [ ] Rebuild it with from the ground up.
+- [ ] Connect all the media.
+- [ ] Complete better ReadMe.
+- [ ] Host on Netlify/ Heroku
 
 
 ## License
