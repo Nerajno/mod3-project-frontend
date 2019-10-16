@@ -3,7 +3,7 @@ body{
 
     /* Full height */
     height: 100%; 
-  
+    color: black;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -12,11 +12,24 @@ body{
 
 section,
 footer{
-    text-align: center
+    text-align: center;
+    margin: auto;
+}
+
+#btn_holder{
+    margin-bottom: auto;
 }
 
 img{
     width: 50vw;
     height: 60vh;
     margin: 0 auto;
+}
+
+#title{
+    margin-top: 30px;
+}
+
+#comment{
+    margin-top: 15px;
 }
