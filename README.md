@@ -1,68 +1,51 @@
-## Project title
-A little info about your project and/ or overview that explains **what** the project is about.
+## The ~~Official~~ New Yorker Caption Contest!
+New York Cartoon Caption
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+An engaging game-style app where users create and vote on unique cartoon captions.
+Created to adher to the requirements of the third module of Flatiron's School Software Engineering Immersive program.
 
-## Build status
-Build status of continus integration i.e. travis, appveyor etc. Ex. - 
 
-[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
 
-## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
+• Development of a project from beginning to end. Goals were met through debugging and troubleshooting for various solutions, which lead to successful completion.
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+To Start Application! 1. Run localhost on the backend. https://github.com/Swofford2/caption_backend
+
+Run frontend open index.html
+Author - Christopher Swofford
  
 ## Screenshots
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Ex. -
-
 <b>Built with</b>
-- [Rails](https://rubyonrails.org/)
-- [React](https://reactjs.org/)
-
+• Allowed additional styling to the frontend, using CSS.
+• Connected a third-party API to the frontend and persisting the data to the backend.
+• Built frontend using Vanilla JavaScript and executed backend through Ruby on Rails featuring PostgreSQL.
 
 ## Features
 What makes your project stand out?
 
-## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-Describe and show how to run the tests with code examples.
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+This project is hosted on <b>currently</b> on Github
 
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://opensource.guide/how-to-contribute/) will be a big plus.
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. For example, this was borrowed from [https://gist.github.com/akashnimare]
+Give proper credits. 
 
 
 
+Bugs
 - [ ] Add to final Portfolio.
 - [ ] Rewrite clear User Stories.
 - [ ] Rebuild it with from the ground up.
-- [ ] Connect all the media.
-- [ ] Complete better ReadMe.
-- [ ] Host on Netlify/ Heroku
+- [x] Connect all the media.
+- [x] Complete better ReadMe.
+- [ ] Host on Netlify[Front-End] and Firebase/Heroku[Back-End]
 
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
 
-MIT © [Yourname]()
+MIT © 
