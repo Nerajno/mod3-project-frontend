@@ -18,26 +18,13 @@ Include logo/demo screenshot etc.
 ## Features
 What makes your project stand out?
 
-
 ## How to use?
-This project is hosted on <b>currently</b> on Github
-To Start Application! 1. Run localhost on the backend. https://github.com/Swofford2/caption_backend
-
-Run frontend open index.html
-Author - Christopher Swofford
 
 ## User Stories
 - [ ] Add to final Portfolio.
-- [ ] Add to final Portfolio.
-- [ ] Add to final Portfolio.
 
 
-## Credits
-Give proper credits. 
-
-
-
-Bugs
+## Bugs
 - [ ] Add to final Portfolio.
 - [ ] Rewrite clear User Stories.
 - [ ] Rebuild it with from the ground up.
@@ -50,3 +37,8 @@ Bugs
 A short snippet describing the license (MIT, Apache etc)
 
 MIT © 
+
+## Credits
+Give proper credits. 
+
+
