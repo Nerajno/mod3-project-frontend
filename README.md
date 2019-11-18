@@ -28,16 +28,8 @@ Author - Christopher Swofford
 
 ## User Stories
 - [ ] Add to final Portfolio.
-- [ ] Add to final Portfolio.
-- [ ] Add to final Portfolio.
 
-
-## Credits
-Give proper credits. 
-
-
-
-Bugs
+## Bugs
 - [ ] Add to final Portfolio.
 - [ ] Rewrite clear User Stories.
 - [ ] Rebuild it with from the ground up.
@@ -48,5 +40,9 @@ Bugs
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
+
+## Credits
+Give proper credits. 
+
 
 MIT © 
