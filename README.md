@@ -21,16 +21,16 @@ What makes your project stand out?
 ## How to use?
 
 ## User Stories
-- [ ] Add to final Portfolio.
+
 
 
 ## Bugs
--[x] Connect all the media.
--[x] Complete better ReadMe.
--[ ] Add to final Portfolio.
--[ ] Rewrite clear User Stories.
--[ ] Rebuild it with from the ground up.
--[ ] Host on Netlify[Front-End] and Firebase/Heroku[Back-End]
+- [x] Connect all the media.
+- [x] Complete better ReadMe.
+- [ ] Add to final Portfolio.
+- [ ] Rewrite clear User Stories.
+- [ ] Rebuild it with from the ground up.
+- [ ] Host on Netlify[Front-End] and Firebase/Heroku[Back-End]
 
 
 ## License
