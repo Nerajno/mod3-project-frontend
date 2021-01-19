@@ -22,11 +22,10 @@ What makes your project stand out?
 
 ## User Stories
 
-
-
 ## Bugs
 - [x] Connect all the media.
 - [x] Complete better ReadMe.
+## Bugs
 - [ ] Add to final Portfolio.
 - [ ] Rewrite clear User Stories.
 - [ ] Rebuild it with from the ground up.
@@ -35,6 +34,10 @@ What makes your project stand out?
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
+
+## Credits
+Give proper credits. 
+
 
 MIT © 
 
