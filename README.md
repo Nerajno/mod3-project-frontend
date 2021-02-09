@@ -11,9 +11,9 @@ Include logo/demo screenshot etc.
 
 ## Tech/framework used
 <b>Built with</b>
-• Allowed additional styling to the frontend, using CSS.
-• Connected a third-party API to the frontend and persisting the data to the backend.
-• Built frontend using Vanilla JavaScript and executed backend through Ruby on Rails featuring PostgreSQL.
+- Allowed additional styling to the frontend, using CSS.
+- Connected a third-party API to the frontend and persisting the data to the backend.
+- Built frontend using Vanilla JavaScript and executed backend through Ruby on Rails featuring PostgreSQL.
 
 ## Features
 What makes your project stand out?
@@ -26,9 +26,9 @@ What makes your project stand out?
 - [x] Connect all the media.
 - [x] Complete better ReadMe.
 ## Bugs
-- [ ] Add to final Portfolio.
+- [X] Add to final Portfolio.
 - [ ] Rewrite clear User Stories.
-- [ ] Rebuild it with from the ground up.
+- [x] Rebuild it with from the ground up.
 - [ ] Host on Netlify[Front-End] and Firebase/Heroku[Back-End]
 
 
