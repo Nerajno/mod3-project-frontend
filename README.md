@@ -4,10 +4,12 @@ New York Cartoon Caption
 ## Motivation
 An engaging game-style app where users create and vote on unique cartoon captions.
 - Created to adher to the requirements of the third module of Flatiron's School Software Engineering Immersive program.
-- Development of a project from beginning to end. Goals were met through debugging and troubleshooting for various solutions, which lead to successful completion.
+- Development of a project from beginning to end with a team. 
+- Goals were met through debugging and troubleshooting for various solutions, which lead to successful completion.
  
-## Screenshots
-Include logo/demo screenshot etc.
+## Screenshot
+![Image of Screenshot](https://github.com/Nerajno/mod3-project-frontend/blob/master/Mod3_frontend.png)
+
 
 ## Tech/framework used
 <b>Built with</b>
@@ -39,9 +41,8 @@ A short snippet describing the license (MIT, Apache etc)
 Give proper credits. 
 
 
-MIT © 
 
 ## Credits
-Give proper credits. 
+MIT © 
 
 
